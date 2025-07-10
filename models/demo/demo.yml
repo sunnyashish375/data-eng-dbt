@@ -27,6 +27,11 @@ models:
     description: "DBT model for orders"
   - name: final_order
     description: "DBT final model for final order"
+  - name: concat_address
+    description: "DBT final model for address concat"
+  - name: concat_name
+    description: "DBT final model for name concat"
+
 sources:
   - name: employee
     database: DBT_ID
@@ -58,3 +63,15 @@ sources:
     schema: PUBLIC 
     tables: 
       - name: BASE_ORDERS
+  - name: patient
+    database: DBT_DB
+    schema: PUBLIC 
+    tables: 
+      - name: PATIENT_SRC
+  - name: country
+    database: DBT_DB
+    schema: PUBLIC 
+    tables: 
+      - name: SESSION_SRC
+
+    

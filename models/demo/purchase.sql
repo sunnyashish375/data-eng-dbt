@@ -1,8 +1,8 @@
 {{
     config(
-        materialized='incremental'
-        incremental_strategy='merge'
-        unique_key='PURCHASE_ID'
+        materialized='incremental',
+        incremental_strategy='merge',
+        unique_key='PURCHASE_ID',
         merge_exclude_columns=['INSERT_DTS']
     )
 }}
